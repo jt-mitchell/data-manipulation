@@ -1,8 +1,8 @@
 // The initial numbers that must be verified.
-const n1 = 10;
-const n2 = 15;
-const n3 = 20;
-const n4 = 5;
+const n1 = 15;
+const n2 = 10;
+const n3 = 5;
+const n4 = 20;
 
 // Check one: add up to 50
 // This is a fairly simple operation using
@@ -36,11 +36,19 @@ const isValid = isSum50 && isTwoOdd && !isOver25 && isUnique;
 
 // Check if all numbers are divisible by 5. Cache the result in a variable.
  const isDivby5 = (n1 % 5 == 0) && (n1 % 5 == 0) && (n1 % 5 == 0) && (n1 % 5 == 0);
+ //Check if the first number is larger than the last. Cache the result in a variable
+ const n1GreaterThanN4 = (n1 > n4);
 
 
 // Finally, log the results.
 console.log(isValid);
+//logs the result of isDivBy5 as a Boolean 
+
 console.log(" The numbers are divisible by 5 is " + isDivby5);
+
+//logs the result of n1GreaterThanN4 as a Boolean
+
+console.log("The first number is larger than the last number is " + n1GreaterThanN4);
 // Here's another example of how this COULD be done,
 // but it SHOULD NOT be done this way. As programmers,
 // we break things into small, manageable pieces so that
