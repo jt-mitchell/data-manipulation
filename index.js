@@ -32,14 +32,20 @@ const isUnique = n1 != n2 && n1 != n3 && n1 != n4 && n2 != n3 && n2 != n4 && n3 
 // "isUnder25" as an alternative.
 const isValid = isSum50 && isTwoOdd && !isOver25 && isUnique;
 
+//Part 1
+
+// Check if all numbers are divisible by 5. Cache the result in a variable.
+ const isDivby5 = (n1 % 5 == 0) && (n1 % 5 == 0) && (n1 % 5 == 0) && (n1 % 5 == 0);
+
+
 // Finally, log the results.
 console.log(isValid);
-
+console.log(" The numbers are divisible by 5 is " + isDivby5);
 // Here's another example of how this COULD be done,
 // but it SHOULD NOT be done this way. As programmers,
 // we break things into small, manageable pieces so that
 // they can be better understood, scaled, and maintained.
-const dontDoThis = ((n1 + n2 + n3 + n4) == 50) && 
-  ((n1 % 2) + (n2 % 2) + (n3 % 2) + (n4 % 2) >= 2) && 
-  !(n1 > 25 || n2 > 25 || n3 > 25 || n4 > 25) && 
-  (n1 != n2 && n1 != n3 && n1 != n4 && n2 != n3 && n2 != n4 && n3 != n4);
+// const dontDoThis = ((n1 + n2 + n3 + n4) == 50) && 
+  // ((n1 % 2) + (n2 % 2) + (n3 % 2) + (n4 % 2) >= 2) && 
+  // !(n1 > 25 || n2 > 25 || n3 > 25 || n4 > 25) && 
+  // (n1 != n2 && n1 != n3 && n1 != n4 && n2 != n3 && n2 != n4 && n3 != n4);
